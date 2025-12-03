@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    FILE_DIR: str = "uploads" 
+    FILE_DIR: str 
     OPENAI_API_KEY: str | None = None
 
     class Config:
