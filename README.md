@@ -40,7 +40,7 @@ uv info
 
 #This project uses a `.env` file to store sensitive settings like API keys. Create a `.env` file in the project root and add the following:
 
-FILE_DIR=uploads
+FILE_DIR=placeholder_for_your_directory
 OPENAI_API_KEY=your_openai_api_key_here
 
 # run API service
