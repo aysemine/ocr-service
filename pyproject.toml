@@ -5,10 +5,25 @@ description = "FastAPI based OCR service"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "easyocr>=1.7.2",
     "fastapi[standard]>=0.122.0",
     "openai>=1.97.0",
     "pydantic-settings>=2.10.1",
     "pymupdf>=1.26.6",
     "standard>=1.0.3",
+    "torch==2.5.1",
+    "torchvision==0.20.1",
+    "easyocr>=1.7.2",
+
 ]
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu" },
+]
+torchvision = [
+    { index = "pytorch-cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

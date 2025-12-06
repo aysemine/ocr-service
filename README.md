@@ -23,25 +23,47 @@ It allows users to **upload files**, perform OCR using **EasyOCR** or **OpenAI V
   - Service can be containerized for deployment.
 
 ---
-### Install dependencies using `uv`
+## Prerequisites
 
+Before running the project, install:
+
+**Docker**  
+**Docker Compose**  
+**uv**  
 ```bash
-# If you do not have uv installed 
-pip install uv
+  pip install uv
+```
+## Installation
 
-# Activate the uv environment
+1. Clone the repository
+```
+git clone https://github.com/aysemine/ocr-service.git
+
+cd ocr-service
+```
+2. Copy example .env and update to your variables
+```
+cp .env.example .env
+```
+3. Activate the uv environment
+```
 uv activate
-
-# Install all dependencies from pyproject.toml
+```
+4. Install all dependencies 
+from pyproject.toml`
+```
 uv sync
-
-# (Optional) Verify installation
+```
+(Optional) Verify installation
+```
 uv info
+```
+## Docker deployment
 
-#This project uses a `.env` file to store sensitive settings like API keys. Create a `.env` file in the project root and add the following:
-
-FILE_DIR=placeholder_for_your_directory
-OPENAI_API_KEY=your_openai_api_key_here
-
-# run API service
-uv run fastapi dev
+5. Build the docker image
+```
+docker compose build
+```
+6. Run the service
+```
+docker compose up
