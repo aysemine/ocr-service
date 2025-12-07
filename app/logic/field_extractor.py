@@ -38,7 +38,7 @@ def extract_field_llm(raw_text: str, field_name: str, field_type: str, field_des
     \"\"\"
     {raw_text}
     \"\"\"
-    Retun the valu in "{field_type}" format. If the value is not found, return "None".
+    Return the value in "{field_type}" format. If the value is not found, return "None".
     """
 
     response = client.responses.create(
